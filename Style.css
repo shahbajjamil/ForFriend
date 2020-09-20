@@ -44,7 +44,7 @@ html {
   margin: 20px;
   font-weight: 700;
   letter-spacing: 1px;
-	text-shadow: 0 0 5px #fff, 0 0 20px #fff;
+  text-shadow: 0 0 5px #fff, 0 0 20px #fff;
 }
 .menu {
   position: fixed;
@@ -153,31 +153,31 @@ html {
   background: #eaeaea;
   text-align: center !important;
 }
-.about-title h6 {
+.title h6 {
   text-align: center !important;
   font-size: 3.3em;
   color: #bbb;
   font-weight: bold;
   text-transform: uppercase;
 }
-.about-subtitle {
+.subtitle {
   text-align: center !important;
   position: absolute;
   top: 36px;
   left: 28%;
   /* transform: translateX(-50%); */
 }
-.about-subtitle h3 {
+.subtitle h3 {
   font-size: 30px;
   color: #000;
   letter-spacing: 1px;
   font-weight: 700;
   text-transform: capitalize;
 }
-.about-disc {
+.disc {
   margin-bottom: 3rem !important;
 }
-.about-disc p {
+.disc p {
   font-size: 15px;
   color: #888;
   letter-spacing: 1px;
@@ -205,28 +205,51 @@ img {
   height: auto;
 }
 .about-fact h2 {
-	margin: 1em auto;
-	color: #fff;
-	text-shadow: 0 0 15px #000, 0 0 30px #000;
+  margin: 1em auto;
+  color: #fff;
+  text-shadow: 0 0 15px #000, 0 0 30px #000;
+  letter-spacing: 1px;
 }
 .about-fact p {
   padding: 0 15px;
   padding-bottom: 3em;
 }
+.about-count {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-count .box {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+  padding-bottom: 3em;
+}
+.about-count .box h5 {
+  font-size: 25px;
+  color: #ec2266;
+}
+.about-count .box h6 {
+  font-size: 18px;
+}
+.gallery{
+  position: relative;
+  text-align: center;
+}
+
 /* Responsive */
 
 @media (max-width: 1280px) {
   .intro {
     padding: 10em 0;
   }
-  .about-subtitle {
+  .subtitle {
     top: 38px;
     left: 25%;
   }
-  .about-subtitle h3 {
+  .subtitle h3 {
     font-size: 29px;
   }
-  .about-disc p {
+  .disc p {
     padding: 2em 10em 0em;
   }
 }
@@ -234,10 +257,10 @@ img {
   .intro h4 {
     margin: 0 20px;
   }
-  .about-subtitle {
+  .subtitle {
     left: 20%;
   }
-  .about-disc p {
+  .disc p {
     padding: 2em 7em 0em;
   }
 }
@@ -245,15 +268,15 @@ img {
   .intro {
     padding: 8em 0;
   }
-  .about-subtitle {
+  .subtitle {
     left: 17%;
   }
-  .about-disc p {
+  .disc p {
     padding: 2em 3em 0em;
   }
 }
 @media (max-width: 1024px) {
-  .about-subtitle {
+  .subtitle {
     left: 12%;
   }
 }
@@ -270,12 +293,16 @@ img {
   .intro h4 {
     font-size: 45px;
   }
-  .about-subtitle {
+  .subtitle {
     left: 31%;
+  }
+  .about-count .box {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 @media (max-width: 900px) {
-  .about-subtitle {
+  .subtitle {
     left: 28%;
   }
 }
@@ -286,7 +313,7 @@ img {
 @media (max-width: 767px) {
 }
 @media (max-width: 736px) {
-  .about-subtitle {
+  .subtitle {
     left: 23%;
   }
 }
@@ -297,35 +324,35 @@ img {
   .intro {
     padding: 3.5em 0;
   }
-  .about-subtitle {
+  .subtitle {
     left: 21%;
   }
 }
 @media (max-width: 640px) {
-  .about-disc p {
+  .disc p {
     padding: 2em 1em 0em;
   }
 }
 @media (max-width: 600px) {
 }
 @media (max-width: 568px) {
-  .about-subtitle {
+  .subtitle {
     left: 18%;
   }
 }
 @media (max-width: 520px) {
-  .about-subtitle {
+  .subtitle {
     left: 15%;
   }
 }
 @media (max-width: 440px) {
-  .about-title h6 {
+  .title h6 {
     font-size: 2.5em;
   }
-  .about-subtitle {
+  .subtitle {
     top: 27px;
   }
-  .about-subtitle h3 {
+  .subtitle h3 {
     font-size: 23px;
   }
   .about-pics .card {
@@ -334,12 +361,12 @@ img {
   }
 }
 @media (max-width: 384px) {
-  .about-subtitle {
+  .subtitle {
     left: 12%;
   }
 }
 @media (max-width: 375px) {
-  .about-subtitle {
+  .subtitle {
     left: 10%;
   }
 }
