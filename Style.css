@@ -44,6 +44,7 @@ html {
   margin: 20px;
   font-weight: 700;
   letter-spacing: 1px;
+	text-shadow: 0 0 5px #fff, 0 0 20px #fff;
 }
 .menu {
   position: fixed;
@@ -162,7 +163,7 @@ html {
 .about-subtitle {
   text-align: center !important;
   position: absolute;
-  top: 31px;
+  top: 36px;
   left: 28%;
   /* transform: translateX(-50%); */
 }
@@ -187,6 +188,32 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+.about-pics .card {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding: 15px;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.about-fact h2 {
+	margin: 1em auto;
+	color: #fff;
+	text-shadow: 0 0 15px #000, 0 0 30px #000;
+}
+.about-fact p {
+  padding: 0 15px;
+  padding-bottom: 3em;
+}
+/* Responsive */
 
 @media (max-width: 1280px) {
   .intro {
@@ -300,6 +327,10 @@ html {
   }
   .about-subtitle h3 {
     font-size: 23px;
+  }
+  .about-pics .card {
+    flex: none;
+    max-width: none;
   }
 }
 @media (max-width: 384px) {
