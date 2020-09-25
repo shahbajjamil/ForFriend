@@ -7,27 +7,70 @@ function toggleMenu() {
   // banner.classList.toggle("active");
 }
 
-const modal = document.querySelector(".modal");
-const previews = document.querySelectorAll(".thumbnail");
-const original = document.querySelector(".full-img");
-const caption = document.querySelector(".caption");
+const lightBoxContainer = document.querySelector(".lightbox");
+const lightBoxImage = document.querySelector(".lightbox-img");
+const counter = document.querySelector(".lightbox-counter");
+const prevButton = document.querySelector(".prev");
+const prevButtonIcon = document.querySelector(".prev .fa");
+const nextButton = document.querySelector(".next");
+const nextButtonIcon = document.querySelector(".next .fa");
+const lightboxText = document.querySelector(".lightbox-text");
+const galleryItems = document.querySelector(".gallery").children;
 
-previews.forEach((preview) => {
-  preview.addEventListener("click", () => {
-    modal.classList.add("open");
-    original.classList.add("open");
-    // Dynamic change text and image
-    const originalScr = preview.getAttribute("data-original");
-    console.log(originalScr);
-    original.src = `images/gallery/${originalScr}`;
-    const altText = preview.alt;
-    caption.textContent = altText;
-  });
-});
+let index;
+let imgSrc;
 
-modal.addEventListener("click", (e) => {
-  if (e.target.classList.contains("modal")) {
-    modal.classList.remove("open");
-    original.classList.remove("open");
+lightBoxContainer.addEventListener("click", function (event) {
+  if (
+    event.target !== lightBoxImage &&
+    event.target !== prevButton &&
+    event.target !== prevButtonIcon &&
+    event.target !== nextButtonIcon &&
+    event.target !== nextButton
+  ) {
+    console.log("close");
+    lightBox();
   }
 });
+
+for (let i = 0; i < galleryItems.length; i++) {
+  galleryItems[i].querySelector("img").addEventListener("click", function () {
+    index = i;
+    changeImage();
+    lightBox();
+  });
+}
+nextButton.addEventListener("click", next);
+prevButton.addEventListener("click", prev);
+lightBoxImage.addEventListener("click", next);
+
+function next() {
+  if (index == galleryItems.length - 1) {
+    index = 0;
+  } else {
+    index++;
+  }
+  changeImage();
+}
+function prev() {
+  if (index == 0) {
+    index = galleryItems.length - 1;
+  } else {
+    index--;
+  }
+  changeImage();
+}
+
+function lightBox() {
+  lightBoxContainer.classList.toggle("open");
+}
+function changeImage() {
+  imgSrc = galleryItems[index]
+    .querySelector("img")
+    .getAttribute("data-original");
+  lightBoxImage.src = `images/gallery/${imgSrc}`;
+  counter.innerHTML = index + 1 + " of " + galleryItems.length;
+  lightboxText.innerHTML = galleryItems[index]
+    .querySelector("img")
+    .getAttribute("alt");
+}
