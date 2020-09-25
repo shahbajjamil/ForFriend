@@ -64,11 +64,24 @@ function prev() {
 function lightBox() {
   lightBoxContainer.classList.toggle("open");
 }
+
+var fullImage = document.createElement("img");
 function changeImage() {
+  smallImgSrc = galleryItems[index].querySelector("img").getAttribute("src");
+
   imgSrc = galleryItems[index]
     .querySelector("img")
     .getAttribute("data-original");
-  lightBoxImage.src = `images/gallery/${imgSrc}`;
+
+  fullImage.onload = function () {
+    lightBoxImage.src = this.src;
+  };
+
+  setTimeout(() => {
+    fullImage.src = `images/gallery/${imgSrc}`;
+  }, 10);
+
+  lightBoxImage.src = smallImgSrc;
   counter.innerHTML = index + 1 + " of " + galleryItems.length;
   lightboxText.innerHTML = galleryItems[index]
     .querySelector("img")
