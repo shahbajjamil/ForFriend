@@ -351,6 +351,32 @@ img {
 .lightbox .lightbox-controls .next.next {
   right: 30px;
 }
+/* !gallery */
+
+/* post */
+.posts {
+  position: relative;
+}
+/* !post */
+
+/* footer */
+footer {
+  padding: 1rem 0 !important;
+  background: #333232;
+}
+.footer-container {
+  padding: 0 15px;
+  width: 100%;
+}
+.footer-container p {
+  font-size: 1rem;
+  text-align: center !important;
+  color: #bbb;
+}
+.footer-container p a {
+  color: #48eb5d;
+}
+/* !footer */
 
 /* Responsive */
 
