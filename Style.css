@@ -356,8 +356,99 @@ img {
 /* post */
 .posts {
   position: relative;
+  text-align: center;
 }
 /* !post */
+
+/* contact */
+.contact {
+  position: relative;
+  text-align: center;
+
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding-bottom: 3rem !important;
+}
+.button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  /* float: left; */
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  /* width: 180px; */
+}
+.button:hover {
+  width: 180px;
+}
+.button .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 60px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+a:nth-child(1):hover .button .icon {
+  background: #4267b2;
+}
+a:nth-child(2):hover .button .icon {
+  background: #1da1f2;
+}
+a:nth-child(3):hover .button .icon {
+  background: #e1306c;
+}
+a:nth-child(4):hover .button .icon {
+  background: #ff0000;
+}
+a:nth-child(5):hover .button .icon {
+  background: #e5ff00;
+}
+
+.button .icon i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.button:hover .icon i {
+  color: #fff;
+}
+.button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+a:nth-child(1):hover .button span {
+  color: #4267b2;
+}
+a:nth-child(2):hover .button span {
+  color: #1da1f2;
+}
+a:nth-child(3):hover .button span {
+  color: #e1306c;
+}
+a:nth-child(4):hover .button span {
+  color: #ff0000;
+}
+a:nth-child(5):hover .button span {
+  color: #e5ff00;
+}
+
+/* !contact */
 
 /* footer */
 footer {
@@ -415,6 +506,11 @@ footer {
   }
   .disc p {
     padding: 2em 3em 0em;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
   }
 }
 @media (max-width: 1024px) {
