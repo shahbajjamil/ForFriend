@@ -1,10 +1,20 @@
+const menuToggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const menuAll = document.querySelectorAll(".menu ul li a");
+
+menuToggle.addEventListener("click", toggleMenu);
+menuAll.forEach((all) => {
+  all.addEventListener("click", function () {
+    console.log(all.innerHTML);
+    toggleMenu();
+    menuAll.forEach((all) => all.classList.remove("active"));
+    all.classList.add("active");
+  });
+});
+
 function toggleMenu() {
-  var menuToggle = document.querySelector(".toggle");
-  // var banner = document.querySelector(".banner");
-  var menu = document.querySelector(".menu");
   menu.classList.toggle("active");
   menuToggle.classList.toggle("active");
-  // banner.classList.toggle("active");
 }
 
 const lightBoxContainer = document.querySelector(".lightbox");
