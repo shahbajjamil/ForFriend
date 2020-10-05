@@ -31,11 +31,11 @@ window.onscroll = function () {
   if (isMobile){
     // console.log("mobile "+positionTop);
     if (positionTop> 130) {
-      menuToggle.style.top = 10+'px';
+      menuToggle.style.top = 20+'px';
       menu.style.top = 70+'px';
     } else {
-      menuToggle.style.top = 100+'px';
-      menu.style.top = 160+'px';
+      menuToggle.style.top = 120+'px';
+      menu.style.top = 170+'px';
     }
     if(positionTop > 6578){
       menuAll.forEach((all) => all.classList.remove("active"));
