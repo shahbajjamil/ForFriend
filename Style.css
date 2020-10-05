@@ -441,7 +441,7 @@ a:nth-child(4):hover .button .icon {
   background: #ff0000;
 }
 a:nth-child(5):hover .button .icon {
-  background: #e5ff00;
+  background: #5b5e3f;
 }
 
 .button .icon i {
@@ -471,7 +471,7 @@ a:nth-child(4):hover .button span {
   color: #ff0000;
 }
 a:nth-child(5):hover .button span {
-  color: #e5ff00;
+  color: #5b5e3f;
 }
 
 /* !contact */
