@@ -29,7 +29,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
 window.onscroll = function () {
   var positionTop = document.documentElement.scrollTop;
   if (isMobile){
-    console.log("mobile "+positionTop);
+    // console.log("mobile "+positionTop);
     if (positionTop> 130) {
       menuToggle.style.top = 20+'px';
       menu.style.top = 70+'px';
