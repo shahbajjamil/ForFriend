@@ -6,6 +6,8 @@ const about = document.getElementById("aboutNav");
 const skill = document.getElementById("skillNav");
 const gallery  = document.getElementById("galleryNav");
 const contact= document.getElementById("contactNav");
+const btnTop = document.getElementById("movetop");
+
 
 menuToggle.addEventListener("click", toggleMenu);
 menuAll.forEach((all) => {
@@ -26,8 +28,23 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
   navigator.userAgent
 );
 
+btnTop.addEventListener("click", function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
 window.onscroll = function () {
   var positionTop = document.documentElement.scrollTop;
+  
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+
   if (isMobile){
     // console.log("mobile "+positionTop);
     if (positionTop> 130) {

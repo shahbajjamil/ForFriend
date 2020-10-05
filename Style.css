@@ -239,7 +239,7 @@ img {
   position: relative;
   text-align: center;
   padding: 10px;
-  background: #f2e1f7;
+  background: #eaeaea;
 }
 .gallery {
   display: grid;
@@ -494,6 +494,28 @@ footer {
   color: #48eb5d;
 }
 /* !footer */
+
+/* -----Button to top------ */
+#movetop {
+  position: fixed;
+  display: none;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e1306c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 25px;
+  opacity: 0.7;
+  box-shadow: 0 0 10px #000;
+}
+#movetop:active {
+  opacity: 1;
+}
+/* !-----Button to top------ */
 
 /* Responsive */
 
