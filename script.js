@@ -29,7 +29,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
 window.onscroll = function () {
   var positionTop = document.documentElement.scrollTop;
   if (isMobile){
-    // console.log("mobile "+positionTop);
+    console.log("mobile "+positionTop);
     if (positionTop> 130) {
       menuToggle.style.top = 20+'px';
       menu.style.top = 70+'px';
@@ -37,16 +37,16 @@ window.onscroll = function () {
       menuToggle.style.top = 120+'px';
       menu.style.top = 170+'px';
     }
-    if(positionTop > 6578){
+    if(positionTop > 6500){
       menuAll.forEach((all) => all.classList.remove("active"));
       contactNav.classList.add("active");
-    } else  if(positionTop > 3910){
+    } else  if(positionTop > 3810){
       menuAll.forEach((all) => all.classList.remove("active"));
       galleryNav.classList.add("active");
-    } else  if(positionTop > 2970){
+    } else  if(positionTop > 2870){
       menuAll.forEach((all) => all.classList.remove("active"));
       skillNav.classList.add("active");
-    } else  if(positionTop > 683){
+    } else  if(positionTop > 583){
       menuAll.forEach((all) => all.classList.remove("active"));
       aboutNav.classList.add("active");
     } else  if(positionTop >= 0){
