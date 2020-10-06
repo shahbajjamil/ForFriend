@@ -54,7 +54,7 @@ window.onscroll = function () {
       menuToggle.style.top = 120+'px';
       menu.style.top = 170+'px';
     }
-    if(positionTop > 6500){
+    if(positionTop > 4700){
       menuAll.forEach((all) => all.classList.remove("active"));
       contactNav.classList.add("active");
     } else  if(positionTop > 3810){
@@ -73,7 +73,7 @@ window.onscroll = function () {
   } 
   else {
     // console.log("other "+positionTop);
-    if(positionTop > 2940){
+    if(positionTop > 3940){
       menuAll.forEach((all) => all.classList.remove("active"));
       contactNav.classList.add("active");
     } else  if(positionTop > 2148){
@@ -82,7 +82,7 @@ window.onscroll = function () {
     } else  if(positionTop > 1600){
       menuAll.forEach((all) => all.classList.remove("active"));
       skillNav.classList.add("active");
-    } else  if(positionTop > 535){
+    } else  if(positionTop > 510){
       menuAll.forEach((all) => all.classList.remove("active"));
       aboutNav.classList.add("active");
     } else  if(positionTop >= 0){
