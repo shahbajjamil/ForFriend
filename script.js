@@ -1,4 +1,5 @@
 const menuToggle = document.querySelector(".toggle");
+const toggleBars = document.querySelectorAll(".toggle div");
 const menu = document.querySelector(".menu");
 const menuAll = document.querySelectorAll(".menu ul li a");
 const home = document.getElementById("homeNav");
@@ -20,8 +21,9 @@ menuAll.forEach((all) => {
 });
 
 function toggleMenu() {
+  // console.log(toggleBars);
   menu.classList.toggle("active");
-  menuToggle.classList.toggle("active");
+  toggleBars.forEach(bar =>bar.classList.toggle("active"));
 }
 
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
